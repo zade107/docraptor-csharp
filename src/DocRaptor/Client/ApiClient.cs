@@ -131,7 +131,7 @@ namespace DocRaptor.Client
             foreach(var param in formParams)
                 request.AddParameter(param.Key, param.Value);
 
-            // add file parameter, if any         public IRestRequest AddFile(string name, Action<Stream> writer, string fileName, long contentLength, string contentType = null);
+            // add file parameter, if any
             foreach (var param in fileParams)
             {
                 request.AddFile(param.Value.Name, param.Value.Writer, param.Value.FileName, param.Value.ContentLength, param.Value.ContentType);
